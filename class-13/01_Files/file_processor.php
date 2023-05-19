@@ -23,10 +23,28 @@
     // accept only jpeg file type
 
     if($_FILES['inputFile']['type']=="image/jpeg"){
-        echo "Jpeg file uploaded";
+        echo "Jpeg file uploaded <br>";
     } else {
-        echo "Please upload a jpeg image.";
+        echo "Please upload a jpeg image.<br>";
     }
+
+
+    // move_uploaded_file
+    // moves a uploaded file to a new location
+
+    $target = $_FILES['inputFile']['tmp_name'];
+
+    $destination = 'uploads/' . $_FILES['inputFile']['name'];
+
+    $is_file_moved = move_uploaded_file($target,$destination);
+
+    if ($is_file_moved) {
+        echo "File moved successfully";
+    }else {
+        echo "File not moved";
+    }
+
+
 
 
     ?>
