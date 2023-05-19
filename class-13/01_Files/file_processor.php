@@ -17,7 +17,6 @@
         echo "<p> File Name: " . $_FILES['inputFile']['name'] . ".</p>";
         echo "<p> File Type: " . $_FILES['inputFile']['type'] . ".</p>";
         echo "<p> Temp File Loc: " . $_FILES['inputFile']['tmp_name'] . ".</p>";
-
     }
 
 
